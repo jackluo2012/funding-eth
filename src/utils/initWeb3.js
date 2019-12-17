@@ -9,15 +9,17 @@ if (window.ethereum) {
     try {
         // Request account access if needed
         window.ethereum.enable().then(data => {
-            console.log(data);
+//            console.log(data);
         });
     } catch (error) {
         // User denied account access...
+        console.log('未获取授权!!!!');
     }
 }
 // Legacy dapp browsers...
 else if (window.web3) {
     web3 = new Web3(web3.currentProvider);
 }
-
-module.exports = web3;
+//es 6的语法 ,default 标识mo认导出,在使用时，名字可以改变
+// 使用时用import导入
+export default web3;

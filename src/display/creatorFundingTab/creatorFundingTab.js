@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-
+import {fundingFactoryInstance} from '../../eth/instance';
 class CreatorFundingTab extends Component {
 
 
-    componentWillMount() {
-
+    async componentWillMount() {
+        let creatorFundings = await fundingFactoryInstance.methods.getCreatorFundings().call();
+        console.log(creatorFundings)
     }
 
     render() {
