@@ -14,21 +14,6 @@ let mnemonic = "end birth ripple elder spice govern trend depend reward uphold m
 // 3.设置网络
 let isConnect = web3.setProvider('http://localhost:7545')
 
-/*
-const account = '0x975938478Fa7359567b84E9c9ccc20b2aac23066'
-getAccount = async () => {
-    let accounts = await web3.eth.getAccounts();
-    //console.log(accounts);
-    return accounts;
-};
-
-
-web3.eth.getAccounts().then((accounts) => {
-    deploy(accounts[0]).then(instance =>{
-        console.log('address :',instance.options.address)
-    });
-});
-*/
 console.log(interface);
 // 1. 拼接合约数据 interface
 let contract = new web3.eth.Contract(JSON.parse(interface))

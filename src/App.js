@@ -17,8 +17,8 @@ class App extends React.Component {
     async componentWillMount() {
         let accounts = await web3.eth.getAccounts();
         console.log(accounts);
-        let platfromManager = await fundingFactoryInstance.methods.platformManager().call();
-        console.log(platfromManager);
+        let platformManager = await fundingFactoryInstance.methods.platformManager().call();
+        console.log('manager: ',platformManager);
         this.setState({
             currentAccount:accounts[0],
         })

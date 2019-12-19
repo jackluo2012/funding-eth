@@ -32,6 +32,7 @@ contract FundingFactory {
         supportorFundings = new SupportorFundingContract();
     }
     // "特斯拉",1000000,1,3600
+    // "马莎拉蒂",1000000,2,3600
     function createFunding(string _projectName, uint256 _targetMonery, uint256 _supportMoney, uint256 _duration) public {
 
         //创建一个合约，使用new方法，同时传入参数，返回一个地址

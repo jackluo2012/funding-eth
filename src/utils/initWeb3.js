@@ -9,7 +9,7 @@ if (window.ethereum) {
     try {
         // Request account access if needed
         window.ethereum.enable().then(data => {
-//            console.log(data);
+           console.log('拿到了授权信息');
         });
     } catch (error) {
         // User denied account access...
