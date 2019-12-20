@@ -7,23 +7,24 @@ const CardList = (props) => {
     let details = props.details;
 
     let onCardClick = props.onCardClick;
+    if (details) {
+        let cards = details.map((detail) => {
+            return <CardFunding key={detail.fundingAddress} detail={detail}
+                                onCardClick={onCardClick}
+                                color='red' image={src}/>
+        });
 
-    let cards = details.map((detail) => {
-        return <CardFunding key={detail.fundingAddress} detail={detail}
-                            onCardClick={onCardClick}
-                            color='red' image={src}/>
-    });
+        return (
+            <Card.Group itemsPerRow={4}>
 
-    return (
-        <Card.Group itemsPerRow={4}>
-
-            {
-                cards
-            }
+                {
+                    cards
+                }
 
 
-        </Card.Group>
-    )
+            </Card.Group>
+        )
+    }
 };
 
 

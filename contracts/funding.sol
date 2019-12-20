@@ -26,7 +26,7 @@ contract Funding {
         manager = _creator;
         //合约创建人(部署)
         projectName = _projectName;
-        targetMonery = _targetMonery;
+        targetMonery = _targetMonery * 10 ** 18;
         supportMoney = _supportMoney * 10 ** 18;
         // 1个以太坊
         //当前时间+ 持续时间 = 终止时间

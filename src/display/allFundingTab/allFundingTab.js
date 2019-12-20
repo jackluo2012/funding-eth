@@ -14,7 +14,7 @@ class AllFundingTab extends Component {
 
 
         let allFundingsDetails = await getFundingDetails(1);
-        console.table('allFundingsDetails', allFundingsDetails)
+//        console.table('allFundingsDetails', allFundingsDetails)
         this.setState({
             allFundingsDetails
         });
@@ -22,7 +22,7 @@ class AllFundingTab extends Component {
 
     //传递一个回调函数给CardList,将所选择的Card的详细信息返回回来
     onCardClick = (selectedFundingDetail) => {
-        console.log('bbb', selectedFundingDetail);
+//        console.log('bbb', selectedFundingDetail);
         this.setState({
             seletedFundingDetail: selectedFundingDetail,
         })

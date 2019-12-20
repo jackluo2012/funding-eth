@@ -16,8 +16,8 @@ class CreateFundingForm extends Component {
 
     handleCreate = async () => {
         let {active, projectName, targetMoney, supportMoney, duration} = this.state
-        console.log('projectName:', projectName)
-        console.log('targetMoney:', supportMoney)
+        console.log('projectName:', projectName);
+        console.log('targetMoney:', supportMoney);
         this.setState({active: true})
 
         try {
@@ -30,7 +30,7 @@ class CreateFundingForm extends Component {
             this.setState({active: false})
             console.log(e)
         }
-    }
+    };
 
     render() {
         let {active, projectName, targetMoney, supportMoney, duration} = this.state
